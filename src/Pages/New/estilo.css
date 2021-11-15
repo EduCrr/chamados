@@ -1,0 +1,31 @@
+label {
+  font-weight: bold;
+  float: left;
+  font-size: 20px;
+  margin: 30px 0px;
+  text-align: left !important;
+}
+.radios {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio input {
+  margin-left: 10px;
+  width: 25px;
+}
+input,
+textarea {
+  margin-bottom: 20px !important;
+}
+
+/*
+
+    input[type="radio"]
+*/

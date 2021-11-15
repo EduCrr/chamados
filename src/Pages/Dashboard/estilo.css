@@ -1,0 +1,194 @@
+.window {
+  display: flex;
+}
+.window ::-webkit-scrollbar {
+  width: 0.6vw;
+}
+
+.window ::-webkit-scrollbar-thumb {
+  background-color: #1c1b21;
+  border-radius: 10px;
+}
+
+.window ::-webkit-scrollbar-track {
+  background-color: #5555;
+  border-radius: 10px;
+}
+
+.react-calendar {
+  background-color: transparent !important;
+  border: 0px !important;
+  font-family: "Domine", serif !important;
+  border-radius: 20px;
+  width: 380px;
+  padding: 3px;
+  max-width: 100%;
+  background: white !important;
+  font: inherit;
+  line-height: 1.125em;
+  overflow: hidden;
+  box-shadow: 7px 7px 3px rgba(192, 192, 192, 0.22);
+}
+
+.react-calendar button {
+  background-color: white !important;
+  font-size: 13px;
+}
+.react-calendar button.react-calendar__tile--active {
+  background: #006edc !important;
+  color: white;
+  border-radius: 5px;
+}
+.welcome {
+  background: radial-gradient(
+    at left center,
+    rgb(44 44 44) 40%,
+    rgb(28, 27, 33) 85%
+  );
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 7px 7px 3px rgba(192, 192, 192, 0.22);
+}
+abbr[title] {
+  text-decoration: none !important;
+}
+.area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome img {
+  height: auto;
+  width: 320px;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.box {
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: #2081db;
+  border-radius: 5px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boxId {
+  cursor: unset;
+  color: white;
+  height: 30px;
+  width: 30px;
+}
+
+.profileUser {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px !important;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 7px 7px 3px rgba(192, 192, 192, 0.22);
+}
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+}
+img.profileInfoImg {
+  margin: auto;
+  margin-bottom: 20px;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  background-position: center;
+}
+
+.areaChamado {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 7px 7px 3px rgba(192, 192, 192, 0.22);
+}
+.areaStatus {
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+}
+.areaName {
+  width: 200px;
+}
+
+.box a {
+  margin-top: 0px;
+}
+
+a.searchEach {
+  margin-right: 10px;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box.delete {
+  background-color: #f33838 !important;
+}
+@media (max-width: 768px) {
+  .react-calendar {
+    margin: auto;
+  }
+  .profileUser {
+    margin-top: 30px !important;
+    margin: auto;
+    height: auto;
+    max-width: 350px;
+  }
+  .area {
+    flex-direction: column;
+  }
+  .welcome img {
+    width: 250px;
+  }
+
+  .areaChamado {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .areaName {
+    text-align: center;
+    width: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .areaStatus,
+  .date {
+    margin-bottom: 10px;
+  }
+  .btnSearch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .btns {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin !important;
+  scrollbar-color: #7775 #5555;
+}
+
+*:focus {
+  outline: 0;
+}
+
+body {
+  overflow-y: hidden;
+  background-color: #faf8fd !important;
+  color: #211413 !important;
+  font-family: "Domine", serif !important;
+  font-size: 16px;
+}
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style-type: none !important;
+}
+
+button {
+  cursor: pointer !important;
+}
+h1 {
+  font-weight: bold;
+}
+.copy--button {
+  padding: 15px;
+  background-color: #2c2c2c;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: white !important;
+}
+.copy--button.left {
+  margin-left: 15px;
+}

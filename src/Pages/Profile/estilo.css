@@ -1,0 +1,41 @@
+.profile {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  background-position: center;
+}
+.formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input:disabled {
+  cursor: not-allowed;
+}
+.contact {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white;
+}
+input[type="file"] {
+  display: none;
+}
+@media (max-width: 425px) {
+  .areaFrom input,
+  select,
+  textarea,
+  label {
+    width: 226px;
+  }
+}
+@media (max-width: 320px) {
+  .areaFrom input,
+  select,
+  textarea,
+  label {
+    width: 176px !important;
+  }
+}

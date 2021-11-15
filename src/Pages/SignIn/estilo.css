@@ -1,0 +1,65 @@
+.window {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.areaWindow {
+  padding: 95px;
+  opacity: 0.98;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 5px;
+}
+.areaLogo h1 {
+  font-size: 35px;
+}
+.areaLogo,
+.areaFrom {
+  display: flex;
+  flex-direction: column;
+}
+.areaFrom input,
+select,
+textarea,
+label {
+  padding: 15px;
+  background-color: #2c2c2c;
+  border: 0;
+  border-right: 0;
+  border-radius: 5px;
+  width: 300px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: white !important;
+  cursor: pointer;
+}
+label {
+  font-size: 15px !important;
+  font-weight: none;
+}
+img.logoSignin {
+  height: auto;
+  width: 80px;
+  margin-bottom: 20px;
+}
+a {
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #2c2c2c !important;
+}
+.log {
+  background-color: #006edc;
+}
+@media (max-width: 375px) {
+  .areaLogo h1 {
+    font-size: 26px;
+  }
+}
