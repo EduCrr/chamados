@@ -24,10 +24,11 @@ export default () => {
   const [showModal, setShowModal] = useState(false);
   const [dataModal, setDataModal] = useState({});
   const [showSearch, setShowSearch] = useState(true);
+  console.log(user);
   let helpTextFirebase = firebase
     .firestore()
     .collection("registros")
-    .orderBy("created", "desc");
+    .where("userId", "==", user.uid);
 
   async function updateState(snapshot) {
     //entao é vazio true
@@ -44,6 +45,7 @@ export default () => {
           createdFormat: format(doc.data().created.toDate(), "dd/MM/yyyy"),
           status: doc.data().status,
           texto: doc.data().texto,
+          userId: doc.data().userId,
         });
       });
       let lastRegistro = snapshot.docs[snapshot.docs.length - 1]; //pegando ultimo documento
@@ -53,22 +55,6 @@ export default () => {
       setIsEmpty(true);
     }
     setLoadingMore(false);
-  }
-
-  //carregando mais chamados
-  async function handleSearch(e) {
-    e.preventDefault();
-    setLoadingMore(true);
-    await helpTextFirebase
-      .startAfter(lastDocs)
-      .limit(5)
-      .get()
-      .then((snapshot) => {
-        updateState(snapshot);
-      })
-      .catch((error) => {
-        console.log("Não foi possivel carragar os chamados " + error);
-      });
   }
 
   useEffect(() => {
@@ -88,6 +74,23 @@ export default () => {
     loadingChamados();
   }, []);
 
+  //carregando mais chamados
+  async function handleSearch(e) {
+    e.preventDefault();
+    setLoadingMore(true);
+    await helpTextFirebase
+
+      .startAfter(lastDocs)
+      .limit(5)
+      .get()
+      .then((snapshot) => {
+        updateState(snapshot);
+      })
+      .catch((error) => {
+        console.log("Não foi possivel carragar os chamados " + error);
+      });
+  }
+
   function handleToggleModal(item) {
     setShowModal(!showModal);
     setDataModal(item);
@@ -105,6 +108,7 @@ export default () => {
       .firestore()
       .collection("registros")
       .where("status", "==", busca)
+      .where("userId", "==", user.uid)
       .get()
       .then((snapshot) => {
         setChamados([]);

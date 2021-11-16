@@ -37,7 +37,7 @@ function AuthProvider({ children }) {
       })
       .catch((error) => {
         console.log(error);
-        toast.error("Erro!");
+        toast.error("Email/senha inválido(s)");
         setLoadingAuth(false);
       });
   }
@@ -75,7 +75,8 @@ function AuthProvider({ children }) {
       })
       .catch((error) => {
         console.log(error);
-        toast.error("Erro!");
+        toast.error("Email/senha inválido(s)");
+        toast.error("Senha deve ser maior que 6 caracteres");
 
         setLoadingAuth(false);
       });

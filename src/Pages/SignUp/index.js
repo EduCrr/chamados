@@ -9,7 +9,7 @@ export default () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (nome !== "" && email !== "" && senha !== "") {
+    if (nome.trim() !== "" && email.trim() !== "" && senha.trim() !== "") {
       signUp(email, senha, nome);
     }
   }
